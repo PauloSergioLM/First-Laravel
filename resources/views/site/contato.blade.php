@@ -1,7 +1,10 @@
  @extends('site.layout.template')
 
- @section('conteudo')
- <div class="topo">
+@section('titulo', 'Contato')
+
+
+    @section('conteudo')
+    <div class="topo">
 
             <div class="logo">
                 <img src="{{ asset('img/logo.png') }}">

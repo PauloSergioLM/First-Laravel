@@ -1,4 +1,6 @@
-  @extends('site.layout.template')
+@extends('site.layout.template')
+
+@section('titulo', 'Sobre nós')
 
     @section('conteudo')
         <div class="topo">
