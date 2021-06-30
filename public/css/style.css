@@ -100,7 +100,7 @@
             }
 
             .menu a:hover {
-                color: #268fd0;
+                color: #aa0202;
             }
 
             .conteudo-destaque {
@@ -111,14 +111,14 @@
 
             .esquerda {
                 float:left;
-                background-color: #268fd0;
+                background-color: #aa0202;
                 width: 60%;
                 height: 100%;
             }
 
             .direita {
                 float:right;
-                background-color: #2a9ee2;
+                background-color: #aa0202;
                 width: 40%;
                 height: 100%;
             }
@@ -154,7 +154,14 @@
 
             .titulo-pagina {
                 padding: 100px 0px 60px 0px;
-                background-color: #2a9ee2;
+                background-color: #aa0202;
+                text-align: center;
+            }
+
+            .titulo-pagina-2 {
+                padding: 70px 0px 10px 0px;
+                margin-bottom: 10px;
+                background-color: #aa0202;
                 text-align: center;
             }
 

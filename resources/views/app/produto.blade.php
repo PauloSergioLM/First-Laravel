@@ -3,5 +3,16 @@
 @section('titulo', 'Produto')
 
     @section('conteudo')
-        <br><br><br><br><br>Produto
+        <div class="conteudo-pagina">
+            <div class="titulo-pagina-2">
+                <h1>Produto</h1>
+            </div>
+
+            <div class="menu">
+
+            </div>
+
+            <div class="informacao-pagina">
+            </div>
+      </div>
     @endsection
