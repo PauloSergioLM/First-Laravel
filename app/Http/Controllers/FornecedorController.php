@@ -15,10 +15,10 @@ class FornecedorController extends Controller
 
         $fornecedores = Fornecedor::where('nome', 'like', '%'.$request->input('nome').'%')
         ->where('email', 'like', '%'.$request->input('email').'%')
-        ->where('uf', 'like', '%'.$request->input('uf').'%')->get();
+        ->where('uf', 'like', '%'.$request->input('uf').'%')->paginate(5);
 
         
-        return view('app.fornecedor.listar',   ['fornecedores' => $fornecedores]);
+        return view('app.fornecedor.listar',   ['fornecedores' => $fornecedores, 'request' => $request->all() ]);
     }
 
     public function adicionar(Request $request){
@@ -57,6 +57,12 @@ class FornecedorController extends Controller
         $fornecedor = Fornecedor::find($id);
 
         return view('app.fornecedor.adicionar', ['fornecedor' => $fornecedor]);
-        }
+    }
 
+    public function excluir($id){
+        
+        Fornecedor::find($id)->delete();
+
+        return redirect()->route('app.fornecedor');
+    }
 }
