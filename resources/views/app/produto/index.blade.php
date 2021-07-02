@@ -24,6 +24,9 @@
                     <th>Descrição</th>
                     <th>Peso - KG</th>
                     <th>Unidade ID</th>
+                    <th>Comprimento</th>
+                    <th>Altura</th>
+                    <th>Largura</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -31,11 +34,14 @@
                 </thead>
                 <tbody>  
                 @foreach ($produtos as $produto)
-                         <tr>
+                      <tr>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->descricao }}</td>
                     <td>{{ $produto->peso }}</td>
                     <td>{{ $produto->unidade_id }}</td>
+                    <th>{{ $produto->produtoDetalhe->comprimento ?? ' '}}</th>
+                    <th>{{ $produto->produtoDetalhe->altura ?? '' }}</th>
+                    <th>{{ $produto->produtoDetalhe->largura ?? '' }}</th>
                     <td><a href="{{ route('produto.show', ['produto' => $produto->id]) }}">Vizualizar</a></td>
                     <td><form id="form_{{ $produto->id }}" method="post" action="{{ route('produto.destroy', ['produto' => $produto->id])}}">
                         @method('DELETE')
