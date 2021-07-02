@@ -10,6 +10,7 @@
 
             <div class="menu">
                 <ul>
+                 <li><a href="{{ 'app.produto_detalhes.create' }}">Voltar</a></li>
                     <li><a href="">Editar</a></li>
                 </ul>
             </div>

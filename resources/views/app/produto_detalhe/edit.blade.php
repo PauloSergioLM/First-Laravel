@@ -10,7 +10,7 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="">Voltar</a></li>
+                    <li><a href="{{ 'app.produto_detalhes.create' }}">Voltar</a></li>
                 </ul>
             </div>
 

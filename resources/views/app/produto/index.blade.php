@@ -20,6 +20,7 @@
                 <table border="1" width="100%">
                 <thead>
                     <tr>
+                    <th>Nome Fornecedor</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Peso - KG</th>
@@ -35,6 +36,7 @@
                 <tbody>  
                 @foreach ($produtos as $produto)
                       <tr>
+                    <td>{{ $produto->fornecedor->nome }}</td>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->descricao }}</td>
                     <td>{{ $produto->peso }}</td>
