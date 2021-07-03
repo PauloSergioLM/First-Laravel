@@ -37,18 +37,22 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $regras = [
-            'nome' => 'required|min:3'
+            'nome' => 'required|min:3|max:40'
         ];
 
         $feedback = [
-            'required' => 'O campo :attribute deve ser preenchido', 
-            'nome.min' => 'O campo nome deve ter no minimo 3 caracters'
+            'required' => 'O campo :attribute deve ser preenchido',
+            'nome.min' => 'O campo nome de ter no mínimo 3 caracteres',
+            'nome.max' => 'O campo nome de ter no máximo 40 caracteres',
         ];
 
         $request->validate($regras, $feedback);
+        
+        $cliente = new Cliente();
+        $cliente->nome = $request->get('nome');
+        $cliente->save();
 
-            Cliente::create($request->all());
-            return redirect()->route('cliente.index');
+        return redirect()->route('cliente.index');
     }
 
     /**

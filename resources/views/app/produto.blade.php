@@ -1,18 +1,8 @@
-@extends('app.layouts.template')
+@extends('app.layouts.basico')
 
 @section('titulo', 'Produto')
 
-    @section('conteudo')
-        <div class="conteudo-pagina">
-            <div class="titulo-pagina-2">
-                <h1>Produto</h1>
-            </div>
+@section('conteudo')
+    <br><br><br><br>Produto
+@endsection
 
-            <div class="menu">
-
-            </div>
-
-            <div class="informacao-pagina">
-            </div>
-      </div>
-    @endsection
